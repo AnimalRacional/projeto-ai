@@ -15,13 +15,17 @@ body {
 
 
 .question-label {
-    margin-bottom: 100px;
+    background-color: lightgreen;
+    border-radius: 25px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 /* As coisas em que se escreve as respostas */
 .question-input {
     padding-left: 10%;
     padding-right: 10%;
+    margin-top: 5px;
     margin-bottom: 15px;
     text-align: center;
 }
