@@ -35,3 +35,10 @@ body {
     text-align: center;
 
 }
+
+.submit-button {
+    margin-bottom: 15px;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
