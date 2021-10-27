@@ -46,7 +46,7 @@ function validateAnswers(){
         }
         
     }
-    return false;
+    return true;
 }
 
 /*
