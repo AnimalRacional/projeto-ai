@@ -4,7 +4,7 @@ body {
 }
 
 /* O quadrado à volta do formulário */
-#questions {
+#main-area {
     background-color: lightgray;
     width: 75%;
     margin: auto;
