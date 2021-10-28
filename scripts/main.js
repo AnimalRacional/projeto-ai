@@ -65,7 +65,7 @@ function radioButton(label, name, options, other=true){
     if(other){
         document.write("<input required class=\"question-input\" type=\"radio\" id=\"other" + name.toLowerCase() + "\" name=\"" + name + "\" value=\"Other\">");
         document.write("<label class=\"radio-label\" for=\"other\"> Outro</label> ")
-        document.write("<input class=\"question-other-text\" type=\"text\" id=\"other" + name.toLowerCase() + "text\"><br>")
+        document.write("<input class=\"question-other-text\" type=\"text\" name=\"other" + name.toLowerCase() + "text\" id=\"other" + name.toLowerCase() + "text\"><br>")
     }
 }
 
