@@ -5,7 +5,7 @@
 </head>
 
 <body>
-    <?php require("php/first.php") ?>
+    <?php require("php/register.php") ?>
     <div id="main-area">
         <h1 class="thanks">Obrigado por Participar!</h1>
     </div>
