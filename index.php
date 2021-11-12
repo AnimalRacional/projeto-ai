@@ -12,7 +12,7 @@
     <div id="main-area">
         <!-- TODO colocar titulo aqui-->
         <h1>Colocar titulo aqui</h1>
-        <form id="formulario" action="results.php" method="POST">
+        <form id="formulario" onsubmit="return validateAnswers()" action="results.php" method="POST">
             <label class="question-label" for="email">E-mail</label><br>
             <input required class="email-input" id="email" name="email" type="email"><br>
             <h6>O seu e-mail não vai ser associado às suas respostas, e vai ser apenas utilizado para identificar quem respondeu ao questionário</h6>
