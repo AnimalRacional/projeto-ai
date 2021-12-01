@@ -69,6 +69,15 @@ function radioButton(label, name, options, other=true){
     }
 }
 
+function numeric(label, name){
+    document.write(
+        "<label class=\"question-label\" for=\"" + name.toLowerCase() + "\">" + label + "</label><br>"
+    )
+    document.write(
+        "<input required max=40 class=\"question-input\" id=\"" + name.toLowerCase() + "\" name=\"" + name + "\" type=\"number\"><br>"
+    )
+}
+
 /*
 parâmetros:
 label -> a pergunta
