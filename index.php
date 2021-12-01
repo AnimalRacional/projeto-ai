@@ -11,6 +11,7 @@
 <body>
     <div id="main-area">
         <!-- TODO colocar titulo aqui-->
+        
         <h1>Colocar titulo aqui</h1>
         <form id="formulario" onsubmit="return validateAnswers()" action="results.php" method="POST">
             <label class="question-label" for="email">E-mail</label><br>
@@ -22,7 +23,7 @@
                 textBox("Nacionalidade", "nacionalidade");
                 radioButton("Género", "genero", ["Masculino", "Feminino"], true);
                 radioButton("Identidade de Género", "identidadegenero", ["Cisgénero", "Transsexual"])
-                radioButton("Orientação Sexual", "sexualidade", ["Heterossexual", "Homossexual", "Bisexual", "Asexual", "Pansexual"], true)
+                radioButton("Orientação Sexual", "sexualidade", ["Heterossexual", "Homossexual", "Bisexual", "Assexual", "Pansexual"], true)
                 textBox("Religião", "religiao");
                 radioButton("É praticante da sua religião?", "praticante", ["Sim", "Não", "Sou ateu/agnóstico"], false);
                 textBox("Hobbies?", "hobbies");
@@ -35,6 +36,4 @@
         </form>
     </div>
 </body>
-
-
 </html>
