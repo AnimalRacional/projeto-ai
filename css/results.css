@@ -1,28 +1,28 @@
+*{
+    font-family: 'Brush Script MT', monospace, cursive;
+}
+
 body {
     background-color: rgba(128, 0, 128, 0.952);
-    margin: 10%;
 }
+
 #main-area {
     background-color: rgb(90, 90, 90);
     margin: auto;
     padding: auto;
-    width: 75%;
-    height: 55%;
+    width: 960px;
+    height: 500px;
     border-radius: 25px;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    text-align: center;
 }
 .local{
     margin-left: 75%;
-    height: 10;
+    height: 25px;
 }
 .logo{
     width: 154;
     height: 90;
 }
 .thanks {
-    width: 50%;
-    text-align: center;
+    margin-top: 220px;
 }

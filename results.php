@@ -6,10 +6,10 @@
 
 <body>
     <?php require("php/register.php") ?>
-    <nav class="local">
-        <img class="logo" src="imgs/eped.jpg" alt="logo-eped">
-    </nav>
     <div id="main-area">
+        <div class="local">
+            <img class="logo" src="imgs/eped.jpg" alt="logo-eped">
+        </div>
         <h1 class="thanks">Obrigado Pela Participação!!</h1>
     </div>
 </body>
