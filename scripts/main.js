@@ -15,7 +15,7 @@ function isValidEmail(email){
 
 // valida as respostas todas
 function validateAnswers(){
-    let frm = document.forms["formulario"]
+    let frm = document.forms["formulario"].getElementsByTagName("input");
     for(let i = 0; i < frm.length; i++){
         let cur = frm[i];
         if(cur.type == "email"){
@@ -42,7 +42,7 @@ function validateAnswers(){
             if(result == "Other"){
                 result = frm[i].value;
             }
-            if(result == ""){ alert("Escolha Inválida!"); return false;}
+            if(result == ""){ alert('Por favor escreva algo se escolher a opção "Outro"!'); return false;}
         }
         
     }

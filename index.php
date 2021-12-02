@@ -11,14 +11,14 @@
 <body>
     <div id="main-area">
         <!-- TODO colocar titulo aqui-->
-        <nav class="local">
-        <img class="logo" src="imgs/eped.jpg" alt="logo-eped">
-        </nav>
+        <div class="local">
+            <img class="logo" src="imgs/eped.jpg" alt="logo-eped">
+        </div>
         <h1>Projeto de AI</h1>
         <form id="formulario" onsubmit="return validateAnswers()" action="results.php" method="POST">
             <label class="question-label" for="email">E-mail</label><br>
             <input required class="email-input" id="email" name="email" type="email"><br>
-            <h6>O seu e-mail não vai ser associado às suas respostas, e vai ser apenas utilizado para identificar quem respondeu ao questionário</h6>
+            <h5 class="email-text">O seu e-mail não vai ser associado às suas respostas, e vai ser apenas utilizado para identificar quem respondeu ao questionário.</h6>
 
             <script>
                 numeric("Idade", "idade");
@@ -27,8 +27,8 @@
                 radioButton("Identidade de Género", "identidadegenero", ["Cisgénero", "Transsexual"])
                 radioButton("Orientação Sexual", "sexualidade", ["Heterossexual", "Homossexual", "Bisexual", "Assexual", "Pansexual"], true)
                 textBox("Religião", "religiao");
-                radioButton("É praticante da sua religião?", "praticante", ["Sim", "Não", "Sou ateu/agnóstico"], false);
-                textBox("Hobbies?", "hobbies");
+                radioButton("É praticante da sua religião?", "praticante", ["Sim", "Não", "Sou ateu/agnóstico"], true);
+                textBox("Qual é o seu hobbie principal?", "hobbies");
                 radioButton("Qual o seu plano para o futuro?", "planofuturo", ["Faculdade", "Trabalho"], true);
                 textBox("Resumidamente, qual a sua opinião da EPED?", "opiniaoescola");
                 textBox("Disciplina Favorita", "disciplina")
