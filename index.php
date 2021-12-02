@@ -11,8 +11,10 @@
 <body>
     <div id="main-area">
         <!-- TODO colocar titulo aqui-->
-        
-        <h1>Colocar titulo aqui</h1>
+        <nav class="local">
+        <img class="logo" src="imgs/eped.jpg" alt="logo-eped">
+        </nav>
+        <h1>Projeto de AI</h1>
         <form id="formulario" onsubmit="return validateAnswers()" action="results.php" method="POST">
             <label class="question-label" for="email">E-mail</label><br>
             <input required class="email-input" id="email" name="email" type="email"><br>

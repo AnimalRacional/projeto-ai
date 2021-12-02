@@ -6,11 +6,13 @@ function isNumeric(num){
     }
     return true && num.length > 0;
 }
+
 // Verifica se é um email válido
 function isValidEmail(email){
     let dotSplit = email.split('.');
     return !(dotSplit.length-1 != 3 || email.split('@').length-1 != 1 || !isNumeric(dotSplit[0]) && email.endsWith("@eped.pt"))
 }
+
 // valida as respostas todas
 function validateAnswers(){
     let frm = document.forms["formulario"]
