@@ -18,7 +18,7 @@
         <form id="formulario" onsubmit="return validateAnswers()" action="results.php" method="POST">
             <label class="question-label" for="email">E-mail</label><br>
             <input required class="email-input" id="email" name="email" type="email"><br>
-            <h5 class="email-text">O seu e-mail não vai ser associado às suas respostas, e vai ser apenas utilizado para identificar quem respondeu ao questionário.</h6>
+            <h6 class="email-text">O seu e-mail não vai ser associado às suas respostas, e vai ser apenas utilizado para identificar quem respondeu ao questionário.</h6>
 
             <script>
                 numeric("Idade", "idade");
@@ -27,11 +27,11 @@
                 radioButton("Identidade de Género", "identidadegenero", ["Cisgénero", "Transsexual"])
                 radioButton("Orientação Sexual", "sexualidade", ["Heterossexual", "Homossexual", "Bisexual", "Assexual", "Pansexual"], true)
                 textBox("Religião", "religiao");
-                radioButton("É praticante da sua religião?", "praticante", ["Sim", "Não", "Sou ateu/agnóstico"], true);
-                textBox("Qual é o seu hobbie principal?", "hobbies");
+                radioButton("É praticante da sua religião?", "praticante", ["Sim", "Não", "Sou ateu"], true);
+                textBox("Qual é o seu hobbies favoritos?", "hobbies");
                 radioButton("Qual o seu plano para o futuro?", "planofuturo", ["Faculdade", "Trabalho"], true);
                 textBox("Resumidamente, qual a sua opinião da EPED?", "opiniaoescola");
-                textBox("Disciplina Favorita", "disciplina")
+                textBox("Qual sua Disciplina Favorita", "disciplina")
             </script>
 
             <input class="submit-button" value="Submeter" id="submeter" type="submit">
