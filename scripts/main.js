@@ -49,13 +49,31 @@ function validateAnswers(){
     return true;
 }
 
-/*
-parâmetros:
-label -> A pergunta
-name -> o nome dos radio buttons
-options -> as opçoes que se pode escolher
-other -> se tem ou não um botão "Outro:"
-*/
+let form = document.getElementById("formulario");
+window.onload = () => {
+    form = document.getElementById("formulario");
+    addControls();
+    form.appendChild(submitButton());
+}
+
+function submitButton(){
+    let smbtn = document.createElement("input");
+    smbtn.setAttribute("type", "submit");
+    smbtn.classList.add("submit-button");
+    smbtn.id = "submeter";
+    smbtn.setAttribute("value", "Submeter");
+    return smbtn;
+}
+
+let lineBreak = () => { form.appendChild(document.createElement("br")); }
+function addToForm(control){
+    form.appendChild(control);
+    lineBreak();
+}
+
+
+
+/* Versão antiga
 function radioButton(label, name, options, other=true){
     document.write("<label class=\"question-label\" for=\"" + name + "\">" + label + "</label><br>");
     options.forEach(cur => {
@@ -68,7 +86,63 @@ function radioButton(label, name, options, other=true){
         document.write("<input class=\"question-other-text\" type=\"text\" name=\"other" + name.toLowerCase() + "text\" id=\"other" + name.toLowerCase() + "text\"><br>")
     }
 }
+*/
+/*
+parâmetros:
+label -> A pergunta
+name -> o nome dos radio buttons
+options -> as opçoes que se pode escolher
+other -> se tem ou não um botão "Outro:"
+*/
+function radioButton(label, name, options, other=true){
+    let lbl = document.createElement("label");
+    lbl.setAttribute("for", name);
+    lbl.classList.add("question-label");
+    lbl.innerHTML = label;
+    addToForm(lbl);
+    options.forEach(cur => {
+        // Criar o radio button em sí
+        form.appendChild(singleRadioButton(name.toLowerCase() + cur.toLowerCase(), name, cur));
 
+        // Criar a label para o radio button
+        addToForm(radioLabel(name.toLowerCase() + cur.toLowerCase(), cur));
+    })
+    if(other){
+        form.appendChild(singleRadioButton("other" + name.toLowerCase(), name, "Other"));
+        form.appendChild(radioLabel(`other ${name.toLowerCase()}`, "Outro"));
+        addToForm(radioOtherText(name.toLowerCase()))
+    }
+}
+
+function radioOtherText(name){
+    let txt = document.createElement("input");
+    txt.classList.add("question-other-text");
+    txt.setAttribute("type", "text");
+    txt.name = `other${name.toLowerCase()}text`;
+    txt.id = `other${name.toLowerCase()}text`;
+    return txt;
+}
+
+function radioLabel(whatfor, text){
+    let curlbl = document.createElement("label");
+    curlbl.classList.add("radio-label");
+    curlbl.setAttribute("for", whatfor);
+    curlbl.innerHTML = text;
+    return curlbl;
+}
+
+function singleRadioButton(id, name, value){
+    let inp = document.createElement("input");
+    inp.required = true;
+    inp.classList.add("question-input");
+    inp.setAttribute("type", "radio");
+    inp.id = id;
+    inp.name = name;
+    inp.value = value;
+
+    return inp;
+}
+/* Função antiga
 function numeric(label, name){
     document.write(
         "<label class=\"question-label\" for=\"" + name.toLowerCase() + "\">" + label + "</label><br>"
@@ -77,12 +151,33 @@ function numeric(label, name){
         "<input required max=40 class=\"question-input\" id=\"" + name.toLowerCase() + "\" name=\"" + name + "\" type=\"number\"><br>"
     )
 }
+*/
+
+function numeric(label, name){
+    addToForm(makeLabel(name.toLowerCase(), label));
+    let num = document.createElement("input");
+    num.setAttribute("type", "number");
+    num.max = 40;
+    num.classList.add("question-input");
+    num.id = name.toLowerCase();
+    num.name = name;
+    addToForm(num);
+}
+
+function makeLabel(whatfor, text){
+    let lbl = document.createElement("label");
+    lbl.classList.add("question-label");
+    lbl.setAttribute("for", whatfor.toLowerCase());
+    lbl.innerHTML = text;
+    return lbl;
+}
 
 /*
 parâmetros:
 label -> a pergunta
 name -> o id das text boxes
 */
+/* Função antiga
 function textBox(label, name){
     document.write(
         "<label class=\"question-label\" for=\"" + name.toLowerCase() + "\">" + label + "</label><br>"
@@ -90,4 +185,16 @@ function textBox(label, name){
     document.write(
         "<input required class=\"question-input\" id=\"" + name.toLowerCase() + "\" name=\"" + name + "\" type=\"text\"><br>"
     )
+}
+*/
+
+function textBox(label, name){
+    addToForm(makeLabel(name.toLowerCase(), label));
+    let txt = document.createElement("input");
+    txt.setAttribute("type", "text");
+    txt.required = true;
+    txt.classList.add("question-input");
+    txt.id = name.toLowerCase()
+    txt.name = name;
+    addToForm(txt);
 }
