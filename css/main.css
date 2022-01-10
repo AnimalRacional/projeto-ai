@@ -91,3 +91,8 @@ h1{
     border: 0px;
     border-radius: 10px;
 }
+
+/*Parágrafo da introdução*/
+.intro{
+    margin: 10px 50px;
+}

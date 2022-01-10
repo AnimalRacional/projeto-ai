@@ -1,20 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <!-- TODO mudar o titulo -->
-    <title>Projeto AI</title>
+    <title>Inquérito Cultural da P75</title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/main.css">
-    <script src="scripts/main.js"></script>
+    <script src="scripts/main.js" defer></script>
 </head>
 
 <body>
     <div id="main-area">
-        <!-- TODO colocar titulo aqui-->
         <div class="local">
             <img class="logo" src="imgs/eped.jpg" alt="logo-eped">
         </div>
         <h1>Inquérito Cultural</h1>
+        <div class="intro">
+            <h3>Introdução</h3>
+            <p class="intro">Olá! Nós somos alunos da turma P75 de Técnico de Gestão de Programação e Sistemas Informáticos, e estamos
+                a fazer este inquérito no âmbito da disciplina de A.I. O nosso objetivo ao fazermos este inquérito é conseguirmos
+                um melhor entendimento sobre o tipo de pessoas que há na nossa escola, e a sua variedade cultural. O inquérito tem
+                11 questões e é completamente anónimo, mas se você não estiver confortável a responder a certas perguntas, simplesmente
+                escolha a opção "Outro" e escreva que prefere não responder (ou se for de resposta livre, simplesmente escreva).
+            </p>
+        </div>      
         <form id="formulario" onsubmit="return validateAnswers()" action="results.php" method="POST">
             <label class="question-label" for="email">E-mail</label><br>
             <input required class="email-input" id="email" name="email" type="email"><br>
@@ -29,10 +36,10 @@
                 radioButton("Orientação Sexual", "sexualidade", ["Heterossexual", "Homossexual", "Bisexual", "Assexual", "Pansexual"], true)
                 textBox("Religião", "religiao");
                 radioButton("É praticante da sua religião?", "praticante", ["Sim", "Não", "Sou ateu/agnóstico"], true);
-                textBox("Qual é o seu hobbies favoritos?", "hobbies");
+                textBox("Quais são os seus hobbies favoritos?", "hobbies");
+                textBox("Qual sua Disciplina Favorita", "disciplina");
                 radioButton("Qual o seu plano para o futuro?", "planofuturo", ["Faculdade", "Trabalho"], true);
                 textBox("Resumidamente, qual a sua opinião da EPED?", "opiniaoescola");
-                textBox("Qual sua Disciplina Favorita", "disciplina")
             }
             </script>
         </form>
