@@ -2,9 +2,9 @@
 body {
     background-color: rgb(150, 60, 150);
 }
-/*desculpa mais aquela letra não men <3*/
+/* Fonte */
 *{
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
 }
 
 /* O quadrado à volta do formulário */
@@ -72,6 +72,7 @@ h1{
     margin-left: 8px;
 }
 
+
 /*txt do rdbs outros*/
 .question-other-text {
     background-color: rgb(44, 44, 44);
@@ -95,4 +96,22 @@ h1{
 /*Parágrafo da introdução*/
 .intro{
     margin: 10px 50px;
+}
+
+@media only screen and (max-width: 768px){
+    input[type=radio]{
+        -webkit-appearance:button;
+        -moz-appearance:button;
+        appearance:button;
+        border:4px solid #ccc;
+        border-top-color:#bbb;
+        border-left-color:#bbb;
+        background:#fff;
+        width: 25px;
+        height: 25px;
+        border-radius:50%;
+    }
+      input[type=radio]:checked{
+        border:20px solid #4099ff;
+    }
 }
